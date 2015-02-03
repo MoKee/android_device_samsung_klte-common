@@ -1,5 +1,9 @@
 [
   {
+    "repository": "android_vendor_samsung_klte-common",
+    "target_path": "vendor/samsung/klte-common"
+  },
+  {
     "repository": "android_device_samsung_msm8974-common",
     "target_path": "device/samsung/msm8974-common"
   },
