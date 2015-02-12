@@ -110,17 +110,28 @@ static char *camera_fixup_getparams(int __attribute__((unused)) id,
     params.dump();
 #endif
 
+    const char *videoSizeValues = params.get(
+            android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES);
+    if (videoSizeValues) {
+        char videoSizes[strlen(videoSizeValues) + 10 + 1];
+        sprintf(videoSizes, "3840x2160,%s", videoSizeValues);
+        params.set(android::CameraParameters::KEY_SUPPORTED_VIDEO_SIZES,
+                videoSizes);
+    }
+
     /* If the vendor has HFR values but doesn't also expose that
      * this can be turned off, fixup the params to tell the Camera
      * that it really is okay to turn it off.
      */
-
-    const char *hfrValues = params.get(KEY_VIDEO_HFR_VALUES);
-    if (hfrValues && *hfrValues && ! strstr(hfrValues, "off")) {
-        char tmp[strlen(hfrValues) + 4 + 1];
-        sprintf(tmp, "%s,off", hfrValues);
-        params.set(KEY_VIDEO_HFR_VALUES, tmp);
+    const char *hfrModeValues = params.get(KEY_VIDEO_HFR_VALUES);
+    if (hfrModeValues && !strstr(hfrModeValues, "off")) {
+        char hfrModes[strlen(hfrModeValues) + 4 + 1];
+        sprintf(hfrModes, "%s,off", hfrModeValues);
+        params.set(KEY_VIDEO_HFR_VALUES, hfrModes);
     }
+
+    /* Enforce video-snapshot-supported to true */
+    params.set(android::CameraParameters::KEY_VIDEO_SNAPSHOT_SUPPORTED, "true");
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
