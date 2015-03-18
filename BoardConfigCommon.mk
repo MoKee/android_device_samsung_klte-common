@@ -51,7 +51,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 
 # MKHW
 BOARD_HARDWARE_CLASS += device/samsung/klte-common/mkhw
-BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+BOARD_HARDWARE_CLASS += hardware/samsung/mkhw
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
