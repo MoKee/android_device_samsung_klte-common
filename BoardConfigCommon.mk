@@ -49,8 +49,8 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_USES_LEGACY_MMAP := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# CMHW
-BOARD_HARDWARE_CLASS += device/samsung/klte-common/cmhw
+# MKHW
+BOARD_HARDWARE_CLASS += device/samsung/klte-common/mkhw
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # Lights
