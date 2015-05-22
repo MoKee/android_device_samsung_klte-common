@@ -62,7 +62,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    KlteDoze
+    SamsungDoze
 
 # GPS
 PRODUCT_PACKAGES += \
