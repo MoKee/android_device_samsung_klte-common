@@ -294,6 +294,7 @@
 		<ctl name="AUX_PCM_RX_Voice Mixer Voice2" value="1" />
 		<ctl name="Voice2_Tx Mixer AUX_PCM_TX_Voice2" value="1" />
 	</path>
+
 	<!-- end of cp2 call part -->
 
 	<!-- end of Verb -->
