@@ -80,7 +80,7 @@ BOARD_SEPOLICY_DIRS += \
     device/samsung/klte-common/sepolicy
 
 # Sensor
-TARGET_HAS_LEGACY_BODY_SENSOR := true
+TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
