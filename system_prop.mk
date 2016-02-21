@@ -60,3 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.mk.maintainer=ljzyal
