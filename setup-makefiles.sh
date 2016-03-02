@@ -212,7 +212,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter klte kltechn kltechnduo klteduos kltedv kltekdi kltespr klteusc kltevzw,\$(TARGET_DEVICE)),)
+ifneq (\$(filter k3gduosctc klte kltechn kltechnduo klteduos kltedv kltekdi kltespr klteusc kltevzw,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := TimeService
