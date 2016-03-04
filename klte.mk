@@ -100,6 +100,7 @@ PRODUCT_COPY_FILES += \
 ifeq ($(DEVICE_NFC_SONY),yes)
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
+    NfcSony \
     Tag
 else
 PRODUCT_COPY_FILES += \
