@@ -98,10 +98,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # NFC
+ifneq ($(DEVICE_HAS_NO_NFC),true)
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     Tag
+endif
 
 # Radio
 PRODUCT_PACKAGES += \
