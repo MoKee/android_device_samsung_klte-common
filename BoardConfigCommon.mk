@@ -59,7 +59,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Power HAL
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/f9924000.i2c/i2c-2/2-0020/input/input2/doubletap_wake"
 
 # Radio
 BOARD_RIL_CLASS := ../../../device/samsung/klte-common/ril

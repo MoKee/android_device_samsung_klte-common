@@ -601,9 +601,6 @@ on boot
     chown system system /sys/kernel/ipv4/tcp_rmem_max
     chown root radio /proc/cmdline
 
-    # DoubleTapToWake
-    chown system system /sys/devices/f9924000.i2c/i2c-2/2-0020/input/input2/doubletap_wake
-
     # Adjust YUV to RGB Conversion(CSC_Conversion)
     chown system media_rw /sys/class/graphics/fb0/csc_cfg
     chmod 0660 /sys/class/graphics/fb0/csc_cfg
