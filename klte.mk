@@ -99,12 +99,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 # NFC
-ifneq ($(DEVICE_HAS_NO_NFC),true)
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
     Tag
-endif
 
 # Radio
 PRODUCT_PACKAGES += \
