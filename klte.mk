@@ -119,7 +119,8 @@ endif
 
 # Radio
 PRODUCT_PACKAGES += \
-    libril_shim
+    libril_shim \
+    libprotobuf-cpp-full
 
 # Ramdisk
 PRODUCT_PACKAGES += \
