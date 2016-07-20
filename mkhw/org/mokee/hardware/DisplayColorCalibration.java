@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The MoKee OpenSource Project
+ * Copyright (C) 2016 The MoKee OpenSource Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,16 +16,13 @@
 
 package org.mokee.hardware;
 
-import java.io.File;
-import java.util.Scanner;
 import org.mokee.hardware.util.FileUtils;
 
 public class DisplayColorCalibration {
     private static final String COLOR_FILE = "/sys/class/graphics/fb0/rgb";
 
     public static boolean isSupported() {
-        File f = new File(COLOR_FILE);
-        return f.exists();
+         return FileUtils.isFileWritable(COLOR_FILE);
     }
 
     public static int getMaxValue()  {
