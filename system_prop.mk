@@ -66,8 +66,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
-ifneq ($(TARGET_DEVICE),k3gduosctc kltekdi kltedv kltespr klteusc kltevzw)
+ifeq ($(TARGET_DEVICE),klteduos kltechn kltechnduo)
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=ljzyal
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.mk.maintainer=luo2888
 endif
