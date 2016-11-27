@@ -10,7 +10,7 @@
 /data/cam_socket.*                                      u:object_r:camera_socket:s0
 /sys/devices/virtual/camera(/.*)?                       u:object_r:sysfs_camera:s0
 
-# CMHW
+# MKHW
 /sys/devices/virtual/timed_output/vibrator(/.*)?        u:object_r:sysfs_vibeamp:s0
 
 # Display
