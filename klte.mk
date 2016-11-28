@@ -106,7 +106,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 # NFC
-ifeq ($(DEVICE_NFC_SONY),yes)
+ifeq ($(BOARD_NFC_CHIPSET),sony)
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcSony \
