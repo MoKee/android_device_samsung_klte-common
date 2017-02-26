@@ -323,8 +323,6 @@ on boot
     # 4.3 requires this
     chmod 0644 /proc/cmdline
 
-    setprop ro.telephony.call_ring.multiple false
-
     #Set SUID bit for usbhub
     chmod 4755 /system/bin/usbhub
     chmod 755 /system/bin/usbhub_init
@@ -1046,9 +1044,6 @@ on property:sys.boot_completed=1
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # Configure the CPU governor
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-    write /sys/devices/system/cpu/cpu3/online 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
