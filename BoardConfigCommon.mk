@@ -97,6 +97,9 @@ include $(COMMON_PATH)/sepolicy/sepolicy.mk
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
+# IR
+BOARD_HAVE_IR_SENSOR := true
+
 # TWRP Support - Optional
 ifeq ($(WITH_TWRP),true)
 -include $(COMMON_PATH)/twrp.mk
