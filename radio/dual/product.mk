@@ -1,3 +1,3 @@
 # Radio/RIL
 PRODUCT_PACKAGES += \
-    rild_dsds.rc
+    rild_dsda.rc
